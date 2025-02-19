@@ -9,7 +9,7 @@ body {
 header {
     background-color: #333;
     padding: 15px 0;
-    text-align: center;
+    text-align: left;
 }
 
 nav ul {
@@ -43,6 +43,22 @@ section {
     max-width: 600px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.project-button {
+    display: inline-block;
+    background-color: #007bff;
+    color: white;
+    padding: 15px 30px;
+    margin: 20px;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+.project-button:hover {
+    background-color: #0056b3;
 }
 
 footer {
