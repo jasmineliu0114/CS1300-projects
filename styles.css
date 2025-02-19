@@ -4,13 +4,13 @@ body {
     padding: 0;
     background-color: #f5f5f5;
     color: #333;
-    text-align: left;
+    text-align: right;
 }
 
 header {
     background-color: #333;
     padding: 15px 20px;
-    text-align: left;
+    text-align: right;
 }
 
 nav ul {
