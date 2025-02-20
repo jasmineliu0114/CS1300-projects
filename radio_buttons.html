@@ -28,7 +28,21 @@
     
     <section id="input">
         <h2>Inputs</h2>
-        <p>In the following table, we explore and compare inputs from mouse, keyboard, and touchscreen users for three applications: Google Forms, Amazon Checkout, and Outlook Settings. This includes a focus on what users can and cannot do, functionalities that are learnable, memorable, and efficient, and comparisons between the three applications on interaction and accessibility. </p>
+        <p>To get a sense of radio button characteristics, we explore and compare inputs from mouse, keyboard, and touchscreen users for three applications: Google Forms, Amazon Checkout, and Outlook Settings. This includes a focus on what users can and cannot do, functionalities that are learnable, memorable, and efficient, and comparisons between the three applications on interaction and accessibility. </p>
+        <h3>Google Forms Radio Buttons</h3>
+        <div class="image-text-container">
+            <img src="assets/google_forms_1.png" alt="Google Forms Radio buttons in the initial state" style="width:100%; max-height:200px;">
+            <img src="assets/google_forms_2.png" alt="Google Forms Radio buttons with item selected" style="width:100%; max-height:200px;">
+        </div>
+        <h3>Amazon Checkout Radio Buttons</h3>
+        <img src="assets/amazon_1.png" alt="Google Forms Radio buttons with item selected" style="width:100%; max-height:300px;">
+        <img src="assets/amazon_2.png" alt="Google Forms Radio buttons with item selected and text highlighted" style="width:100%; max-height:300px;">
+        <h3>Outlook Settings Radio Buttons</h3>
+        <div class="image-text-container" style="margin-bottom: 10px;">
+            <img src="assets/outlook_1.png" alt="Outlook settings Radio buttons with Large item selected" style="width:100%; max-height:200px;">
+            <img src="assets/outlook_2.png" alt="Outlook settings Radio buttons with Small item selected and highlighted in a box" style="width:100%; max-height:200px;">
+        </div>
+        <h3>Inputs Table</h3>
         <table class="rounded-table" alt="Radio button inputs table" style="width:100%; border-collapse: collapse; text-align: left">
             <tr>
                 <th style="width: 10%;"></th>
@@ -117,6 +131,7 @@
     <section id="output">
         <h2>Outputs</h2>
         <p>Like the section above, we also explore and compare the outputs of the same three applications. In addition to mouse, keyboard, and touchscreen users, there is an additional focus on user who may be using screen readers as well.</p>
+        <h3>Outputs Table</h3>
         <table class="rounded-table" alt="Radio button outputs table" style="width:100%; border-collapse: collapse; text-align: left;">
             <tr>
                 <th style="width: 10%;"></th>
@@ -222,46 +237,74 @@
         <img src="assets/keyboard1.png" alt="Google Forms Radio buttons keyboard user state model" style="width:100%; max-width:600px;">
         <p>Next, let's revise these state models, making an intentional trade-off in learnability, memorability, efficiency, or accessibility.</p>
         <h3>Revised Google Forms Radio Button Component: Mouse User</h3>
+        <img src="assets/mouse2.png" alt="Revised Google Forms Radio buttons mouse user state model" style="width:100%; max-width:500px;">
         <div class="image-text-container">
-            <img src="assets/mouse2.png" alt="Revised Google Forms Radio buttons mouse user state model" style="width:100%; max-width:500px;">
             <div class="text-container">
                 <p>Learnability:
-                    <li>Hover state improves discoverability</li>
-                    <li>Click and hold is not as intuitive</li>
+                    <ul>
+                        <li>Hover state improves discoverability</li>
+                        <li>Click and hold is not as intuitive</li>
+                    </ul>
                 </p>
+            </div>
+            <div class="text-container">
                 <p>Memorability
-                    <li>Unique interaction makes it stand out</li>
-                    <li>Uncommon behavior might be forgotten</li>
+                    <ul>
+                        <li>Unique interaction makes it stand out</li>
+                        <li>Uncommon behavior might be forgotten</li>
+                    </ul>
                 </p>
+            </div>
+            <div class="text-container">
                 <p>Efficiency
-                    <li>Prevents accidental selections (unintentional clicks or double-clicking to highlight text)</li>
-                    <li>Slower interaction and more effort needed</li>
+                    <ul>
+                        <li>Prevents accidental selections (unintentional clicks or double-clicking to highlight text)<li>                        
+                        <li>Slower interaction and more effort needed</li>
+                    </ul>
                 </p>
+            </div>
+            <div class="text-container">
                 <p>Accessibility
-                    <li>Hover state improves visual clarity</li>
-                    <li>Holding may be difficult for users with limited dexterity</li>
+                    <ul>
+                        <li>Hover state improves visual clarity</li>                        
+                        <li>Holding may be difficult for users with limited dexterity</li>
+                    </ul>
                 </p>
             </div>
         </div>
         <h3>Revised Google Forms Radio Button Component: Keyboard User</h3>
+        <img src="assets/keyboard2.png" alt="Revised Google Forms Radio buttons keyboard user state model" style="width:100%; max-width:500px;">
         <div class="image-text-container">
-            <img src="assets/keyboard2.png" alt="Revised Google Forms Radio buttons keyboard user state model" style="width:100%; max-width:500px;">
             <div class="text-container">
                 <p>Learnability:
-                    <li>More structured interaction</li>
-                    <li>Clearer feedback for first-time users</li>
+                    <ul>
+                        <li>More structured interaction</li>
+                        <li>Clearer feedback for first-time users</li>
+                    </ul> 
                 </p>
+            </div>
+            <div class="text-container">
                 <p>Memorability
-                    <li>More distinct interaction flow</li>
-                    <li>Less conventional behavior</li>
+                    <ul>
+                        <li>More distinct interaction flow</li>
+                        <li>Less conventional behavior</li>
+                    </ul>
                 </p>
+            </div>
+            <div class="text-container">
                 <p>Efficiency
-                    <li>Eliminates the need to exit the component to clear selection</li>
-                    <li>Extra key presses</li>
+                    <ul>
+                        <li>Eliminates the need to exit the component to clear selection</li>
+                        <li>Extra key presses</li>
+                    </ul>
                 </p>
+            </div>
+            <div class="text-container">
                 <p>Accessibility
-                    <li>More deliberate selection</li>
-                    <li>Focus state improves visual clarity</li>
+                    <ul>
+                        <li>More deliberate selection</li>
+                        <li>Focus state improves visual clarity</li>
+                    </ul>
                 </p>
             </div>
         </div>
@@ -274,7 +317,16 @@
 
     <section id="reflection">
         <h2>Reflection</h2>
-        <p>Discuss key takeaways, challenges faced, and how this project contributes to your overall learning and growth.</p>
+        <p>After watching <a href="https://www.youtube.com/watch?v=-iccWRhKZa8&ab_channel=99U" target="_blank" rel="noopener noreferrer">Kat Holmes' Inclusive Design</a>, we reflect on the observations and revision made above. Here are the key points regarding usability and accessibility of the different design choices.</p>
+        <ul>
+            <li>The radio button components provided clear visual feedback using hover effects, focus indicators, and active states, which help to improve discoverability.</li>
+            <li>Keyboard navigation was also clear, as tab and arrow key interactions allowed keyboard users to interact effectively.</li>
+            <li>The redesigned radio buttons are designed with even stronger visual indicator, not only highlighting elements more clearly for users who may have low vision, but also making it clearer that both radio buttons and their associated labels can be clicked to select/deselect.</li>
+            <li>Standardizing the user flow between different input states by giving mouse, keyboard, touchscreen, and voice reader users the choice to select/deselect benefits both efficiency and accessibility.</li>
+            <li>One positive accessibility impact of radio button selection method, particularly for Amazon Checkout and Outlook settings is a clear focus box for keyboard users to ensure they know which radio button they are selecting.</li>
+            <li>A negative accessibility impact of auto-selection using arrow keys is that users who accidentally press an arrow key may change their selection without realizing it.</li>
+            <li>Mouse and keyboard users seem to get the most prioritization, which touchscreen and users can face some inconsistencies. While screen-readers seem to be giving user all the necessary information, the organization of that information seem to be more of an afterthought. This could affect the user experience for those who may rely on an input method and make certain applications harder for them to use.</li>
+        </ul>
     </section>
     
     <footer>

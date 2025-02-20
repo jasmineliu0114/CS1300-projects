@@ -80,12 +80,12 @@ section {
 
 .image-text-container {
     display: flex;
-    align-items: center; /* Aligns image and text vertically */
-    gap: 20px; /* Adds space between image and text */
+    align-items: top;
+    gap: 20px;
 }
 
 .image-text-container img {
-    width: 200px; /* Adjust as needed */
+    width: 200px;
     height: auto;
 }
 
