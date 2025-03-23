@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Icenhower Oil and Gas Responsive Redesign</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#overview">Overview</a></li>
+                <li><a href="#problems">Identifying Usability Problems</a></li>
+                <li><a href="#visual-redesign">Visual Redesign</a></li>
+                <li><a href="#responsive-redesign">Responsive Redesign</a></li>
+                <li><a href="#conclusion">Conclusion</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="overview">
+        <h1>Icenhower Oil & Gas Website Redesign</h1>
+        <p>How do you modernize a website without losing its identity? This was the central question I asked when I began redesigning the Icenhower Oil & Gas website. The original site conveyed the company's theme effectively but lacked in usability, visual hierarchy, and accessibility support. As a visitor, it was difficult to quickly identify the company's offerings, and some interactions were unclear or inaccessible to users with assistive technologies.</p>
+        <p>My goal was to maintain the industrial identity of the brand while modernizing the layout, streamlining the content, and improving responsiveness and accessibility across all screen sizes. This process consisted of first identifying usability and accessibility issues, followed by creating mockups of the new website design in Figma, and lastly, implementing a the new website in HTML and CSS to ensure responsiveness across all different screen sizes.</p>
+    </section>
+
+    <section id="problems">
+        <h2>Identifying Usability Problems</h2>
+        <p>First, let's assess the original Icenhower website. At a first glance, this website has a clear theme for users visiting the site but at the cost of some accessibility elements. I am interested in helping the website stick to its narrative while making it easier for users to navigate.</p>
+        <img src="assets/icenhower/original_website.png" alt="Screenshot of original Icenhower oil and gas website" style="display: block; margin: auto; width:90%;">
+        <h3>Problems with the original webpage</h3>
+        <table class="rounded-table" alt="Table outlining problems with Icenhower webpage" style="width:100%; border-collapse: collapse; text-align: left">
+            <tr>
+                <th style="width: 30%;">Usability Principle</th>
+                <th style="width: 70%; vertical-align: top;">Problem</th>
+            </tr>
+            <tr>
+                <td style="width: 30%;">Efficiency</td>
+                <td style="width: 70%; vertical-align: top;">The current header and navigation menu are straightforward, but the rest of the top part of the page is taken up by a slideshow of photos, which may not be immediately important to users of the site. Implementing a more intuitive ordering and layout with clear headings and subheadings would improve user experience.</td>
+            </tr>
+            <tr>
+                <td style="width: 30%;">Learnability</td>
+                <td style="width: 70%; vertical-align: top;">Some of the hyperlinks on the website are not immediately obvious that they are clickable.</td>
+            </tr>
+            <tr>
+                <td style="width: 30%;">Memorability</td>
+                <td style="width: 70%; vertical-align: top;">Adding a company mission statement toward the top of the page can more easily set it apart from other oil and gas companies.</td>
+            </tr>
+            <tr>
+                <td style="width: 30%;">Accessibility</td>
+                <td style="width: 70%; vertical-align: top;">In terms of accessibility, there are several images missing alternative text, which would be beneficial to include for users using screen readers. Additionally, there are some areas with low contrast between text and background colors, which could be an accessibility issue for users with visual impairments.</td>
+            </tr>
+        </table>
+    </section>
+    
+    <section id="visual-redesign">
+        <h2>Visual Redesign</h2>
+        <p>Next, let's create three high-fidelity mockups in Figma to map out our new website design, highlighting what areas of the new website will be responsive to varying screen sizes.</p>
+        <h3>Visual Style Guide: Maintaining Brand Style and Consistency</h3>
+        <img src="assets/icenhower/style_guide.png" alt="Visual style guide for the new Icenhower website" style="display: block; margin: auto; width:70%; margin-bottom: 50px;">
+        <h3>Desktop: 3840 x 2160px</h3>
+        <img src="assets/icenhower/desktop.png" alt="Annotated mockup of Icenhower website on a desktop" style="display: block; margin: auto; width:70%; margin-bottom: 50px;">
+        <h3>Tablet: 768 x 1024px</h3>
+        <img src="assets/icenhower/tablet.png" alt="Annotated mockup of Icenhower website on a tablet" style="display: block; margin: auto; width:70%; margin-bottom: 50px;">
+        <h3>Phone: 375 x 667px</h3>
+        <img src="assets/icenhower/phone.png" alt="Annotated mockup of Icenhower website on a phone" style="display: block; margin: auto; width:70%; margin-bottom: 50px;">
+    </section>
+    
+    <section id="responsive-redesign">
+        <h2>Responsive Redesign</h2>
+        <p>Lastly, let's implement the actual website! The final build of the Icenhower Oil & Gas homepage was developed using HTML and CSS, with Bootstrap providing a responsive grid framework. Visit <a href="https://jasmineliu0114.github.io/responsive-redesign/" target="_blank" rel="noopener noreferrer">here</a> to see the site!</p>
+        <h3>Key Aspects:</h3>
+        <ul>
+            <li><b>Responsive Hero Section:</b> The hero image and branding scale effectively across screen sizes, using viewport width constraints and media queries to adjust text, image size, and layout padding.</li>
+            <li><b>Clear Navigation:</b> The navigation bar provides strong visual cues through hover states and active link styling.</li>
+            <li><b>Custom CSS with Flexbox:</b> I wrote custom styles using Flexbox to control alignment and spacing, particularly in the hero and service sections. Media queries adjust element stacking and padding to maintain visual clarity on smaller screens.</li>
+            <li><b>Accessibility Considerations:</b> I fixed the accessibility issues from the original site through high color contrast ratios for text and backgrounds, adding alt attributes to all images, and implementing large and touch-friendly clickable areas like buttons and nav links.</li>
+        </ul>
+    </section>
+    
+    <section id="conclusion">
+        <h2>Conclusion</h2>
+        <p>This project strengthened my skills in responsive design and accessibility, especially in translating static mockups into interactive layouts that adapt to user contexts. One key challenge was balancing the industrial aesthetic of an oil and gas brand with modern UX expectations. I found that sticking to a minimal palette while still integrating the images from the original site helped keep this balance. This experience reinforced my belief that even small websites serving niche industries deserve thoughtful, accessible, and user-centered design.</p>
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 My GitHub Page. All rights reserved.</p>
+    </footer>
+</body>
+</html>
