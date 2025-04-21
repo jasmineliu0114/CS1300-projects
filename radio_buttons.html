@@ -16,19 +16,20 @@
                 <li><a href="#output">Output</a></li>
                 <li><a href="#state-models">State Models</a></li>
                 <li><a href="#reflection">Reflection</a></li>
+                <li><a href="#conclusion">Conclusion</a></li>
             </ul>
         </nav>
     </header>
     
     <section id="overview">
-        <h1>Accessible Components: Radio Buttons</h1>
-        <p>This project explores the design of radio buttons and how changes in the design make trade-offs between learnability, memorability, efficiency, and accessibility for mouse, keyboard, touchscreen, and screen reader users.</p>
+        <h1>How Accessible are Radio Buttons?</h1>
+        <p>Radio buttons may seem like simple UI components, but their design can significantly affect how people engage with digital forms and settings. In this project, I examined how different radio button implementations shape user experience across platforms and input types. I was particularly interested in how visual and interaction design impact usability for people using mice, keyboards, touchscreens, and assistive technologies.</p>
         <img src="assets/radio_buttons.gif" alt="Radio buttons example gif" style="display: block; margin: auto; width:100%; max-width:400px;">
     </section>
     
     <section id="input">
         <h2>Inputs</h2>
-        <p>To get a sense of radio button characteristics, we explore and compare inputs from mouse, keyboard, and touchscreen users for three applications: Google Forms, Amazon Checkout, and Outlook Settings. This includes a focus on what users can and cannot do, functionalities that are learnable, memorable, and efficient, and comparisons between the three applications on interaction and accessibility. </p>
+        <p>To better understand how people interact with radio buttons, I looked closely at three common interfaces, Google Forms, Amazon Checkout, and Outlook Settings, across multiple input modes. This process helped me examine the subtle differences in what users can see, feel, and do depending on their device and context. I paid special attention to whether actions were intuitive, efficient, and consistent. Each interface told a different story about what it means to design with accessibility and learnability in mind.</p>
         <h3>Google Forms Radio Buttons</h3>
         <div class="image-text-container">
             <img src="assets/google_forms_1.png" alt="Google Forms Radio buttons in the initial state" style="width:100%; max-height:200px;">
@@ -53,75 +54,47 @@
             <tr>
                 <td style="vertical-align: top;">Mouse/Trackpad</td>
                 <td style="vertical-align: top;">
-                    <ul>
-                        <li>Hovering highlights the button.</li>
-                        <li>Click+release the button or the label space selects and unselects the button. Clicking on the label instead of the button is not immediately obvious but is easily learnable. This feature is also efficient, as the user doesn't have to move their mouse all the way to the button to select.</li>
-                        <li>Double-clicking the label text highlights a word and triple-clicking highlights the whole label, but these actions also activate/deactivate the button with each click.</li>
-                        <li>Clicking and dragging also highlights label text and activates/deactivates the button. This could be less efficient since it can select/unselect the button when undesired.</li>
-                        <li>Highlighted text can be copy and pasted to clipboard.</li>
-                    </ul>
+                    <p>Hover + click to select/unselect.</p>
+                    <p>Text can be highlighted (sometimes toggles selection unintentionally).</p>
                 </td>
                 <td style="vertical-align: top;">
-                    <ul>
-                        <li>Click+release the button or the label space selects and unselects the button.</li>
-                        <li>Unlike Google Forms, hovering over a button does not highlight the button or do anything at all.</li>
-                        <li>Users cannot click to unselect a payment method. In the context of this application, this is efficient because one of the payment methods list must be selected in order to complete a purchase.</li>
-                        <li>Double/triple-clicking and clicking+dragging the mouse highlights label text and selects the corresponding radio button. However, there is no deactivating of the button that occurs like in the case of Google Forms.</li>
-                        <li>Highlighted text can be copy and pasted to clipboard.</li>
-                    </ul>
+                    <p>Click to select (no unselect).</p>
+                    <p>Both label + button can be clicked.</p>
+                    <p> No hover effect.</p>
                 </td>
                 <td style="vertical-align: top;">
-                    <ul>
-                        <li>Like the other two applications, click+release the button or the label space selects and unselects the button.</li>
-                        <li>Hovering makes the label text slightly darker.</li>
-                        <li>Unlike the other two applications, the user cannot select text in the label, neither by double/triple-clicking or by clicking and dragging the mouse. </li>
-                        <li>Like the Amazon checkout payment application, users cannot click a radio button to deactivate the selection. Again, this is efficient because one of the options has to be selected.</li>
-                        <li>Like the other two applications, the circular buttons make the action of selecting item easy to learn and memorable, as it is an interface that is consistent across all different applications.</li>
-                    </ul>
-                    
+                    <p>Click to select (no unselect).</p>
+                    <p>Subtle hover effect.</p>
+                    <p>No text highlighting.</p>
                 </td>
             </tr>
             <tr>
                 <td style="vertical-align: top;">Keyboard</td>
                 <td style="vertical-align: top;">
-                    <ul>
-                        <li>If no items are selected, tab highlights the first radio button with a light purple circle. Otherwise, the selected radio button is highlighted.</li>
-                        <li>To navigate to each radio button, the user uses the up/left and down/right arrow keys. This action also activates the radio button that the user moves to. This is not immediately obvious and required a few different keyboard button presses to figure out but is easy to learn and memorize once discovered. It is also pretty efficient, since it moves and selects in one action.</li>
-                        <li>Clearing a selection requires pressing tab to highlight the Clear selection button and hitting enter. This is efficient in the sense that it requires fewer key presses than navigating over to the radio button a user wants to deactivate but less efficient in terms of having to leave the radio button space in order to select the Clear selection button.</li>
-                    </ul>
+                    <p>Arrow keys navigate to items and select.</p>
+                    <p>“Clear selection” button requires extra tabbing.</p>
                 </td>
                 <td style="vertical-align: top;">
-                    <ul>
-                        <li>Tab highlights the selected radio button with a circle outlining the button.</li>
-                        <li>Like Google Forms, the up/left and down/right keys navigates to and selects the upper/lower radio button.</li>
-                        <li>As previously mentioned, users cannot deactivate radio buttons, so there is no keyboard action for this either.</li>
-                    </ul>
+                    <p>Arrow keys select.</p>
+                    <p>No option to deselect.</p>
                 </td>
                 <td style="vertical-align: top;">
-                    <ul>
-                        <li>Tab highlights the selected radio button with a rectangle outlining both the radio button and its label.</li>
-                        <li>Up/left and down/right arrows navigate and select the upper/lower radio buttons, like in the other two applications. Also like the other two, pressing up/left on the top item or down/right on the last item wraps the navigation to the other end of the list, which also make for more efficient navigation.</li>
-                        <li>Again, users cannot deactivate radio buttons, so there is no keyboard action for this either.</li>
-                    </ul>
+                    <p>Arrow keys select.</p>
+                    <p>Selection wraps around.</p>
+                    <p>No deselect.</p>
                 </td>
             </tr>
             <tr>
                 <td style="vertical-align: top;">iPhone Touchscreen</td>
                 <td style="vertical-align: top;">
-                    <ul>
-                        <li>Tapping the button or the label space selects and unselects the button.</li>
-                        <li>Long tapping the label text highlights a word. Unlike double-clicking the mouse, this action does not activate or deactivate the associated radio button.</li>
-                    </ul>
+                    <p>Tap to select/unselect.</p>
+                    <p>Long-press highlights text only.</p>
                 </td>
                 <td style="vertical-align: top;">
-                    <ul>
-                        <li>The mobile version of the Amazon checkout payment page does not have radio buttons.</li>
-                    </ul>
+                    <p>Radio buttons not used in mobile view.</p>
                 </td>
                 <td style="vertical-align: top;">
-                    <ul>
-                        <li>The mobile version Outlook does not have this option in Settings.</li>
-                    </ul>
+                    <p>Not available in mobile settings.</p>
                 </td>
             </tr>
         </table>
@@ -130,7 +103,7 @@
     
     <section id="output">
         <h2>Outputs</h2>
-        <p>Like the section above, we also explore and compare the outputs of the same three applications. In addition to mouse, keyboard, and touchscreen users, there is an additional focus on user who may be using screen readers as well.</p>
+        <p>How do users know their input was recognized? This section explores how each application visually confirms user actions and supports accessibility. I studied how feedback designs, such as hover highlights, focus rings, and screen reader cues, affect user confidence and clarity. These signals are crucial for building interfaces that respect all users, especially those with different abilities or preferred modes of interaction.</p>
         <h3>Outputs Table</h3>
         <table class="rounded-table" alt="Radio button outputs table" style="width:100%; border-collapse: collapse; text-align: left;">
             <tr>
@@ -140,89 +113,43 @@
                 <th style="width: 30%; vertical-align: top;">Outlook Settings</th>
             </tr>
             <tr>
-                <td style="vertical-align: top;">Mouse/Trackpad</td>
+                <td style="vertical-align: top;">Mouse/Keyboard</td>
                 <td style="vertical-align: top;">
-                    <ul>
-                        <li>Hovering over a button highlights the radio button with a larger translucent circle. Selected radio buttons get highlighted with a slightly darker circle than unselected radio buttons.
-                        </li>
-                        <li>Unselected buttons are black-outlined circles. A selected button is filled with a slightly smaller colored button, and the original black circle outline also becomes colored. In terms of accessibility, this makes the selected button much more contrasted than the rest.</li>
-                        <li>Hovering over the Clear selection button highlights the button in a light grey box. Clicking darkens the highlight box.</li>
-                        <li>Focus order when pressing tab:
-                            Radio button → Clear selection button (if a radio button is selected) → Submit</li>
-                    </ul>
+                    <p>Clear visual feedback with color + focus outlines.</p>
+                    <p>“Clear selection” button available.</p>
                 </td>
                 <td style="vertical-align: top;">
-                    <ul>
-                        <li>Like with the other applications, unselected buttons are black-outlined circles. A selected button is filled with a slightly smaller colored button, and the original black circle outline also becomes colored. However, unlike the other two applications, the selected radio button and corresponding label are also highlighted by a translucent box. Considering that a correct selection of a payment method is significantly more important than in the other two cases, this adds to the accessibility of the Amazon checkout page by adding addition contrast to selected items.</li>
-                    </ul>
+                    <p>Strong visual contrast with colored outlines + focus box around label and button.</p>
                 </td>
                 <td style="vertical-align: top;">
-                    <ul>
-                        <li>Hovering over both a button or its label makes the label text slightly darker. This is not a very obvious difference, but gives the user a slight indication that what they are hovering over may be interactive.</li>
-                        <li>Like the others, unselected buttons are black-outlined circles. A selected button is filled with a slightly smaller colored button, and the original black circle outline also becomes colored.</li>
-                    </ul>
-                    
-                </td>
-            </tr>
-            <tr>
-                <td style="vertical-align: top;">Keyboard</td>
-                <td style="vertical-align: top;">
-                    <ul>
-                        <li>The status of pressing tab for radio buttons is indicated by the same circle highlight as hovering.</li>
-                        <li>When the tab key changes status to the Clear selection button, the button is also highlighted by a light grey box, like with hovering.</li>
-                        <li>When pressing up/left or down/right arrow keys to move to and select radio buttons, the selected button is both highlighted by a circle to indicate status and is filled in with the smaller colored circle mentioned in the mouse section.</li>
-                    </ul>
-                </td>
-                <td style="vertical-align: top;">
-                    <ul>
-                        <li>Tab highlights the selected radio button with a circle outlining the button.</li>
-                        <li>Similar to the other two applications, navigation and button selection using the up/left and down/right arrow keys is also indicated with highlighting the current radio button with a circle outlining the button and a smaller circle filling in the selected radio button. Like mentioned in the mouse section, this also has the addition colored box around both the radio button and label text.</li>
-                    </ul>
-                </td>
-                <td style="vertical-align: top;">
-                    <ul>
-                        <li>Tab highlights the selected radio button with a rectangle outlining both the radio button and its label.</li>
-                        <li>Again, navigation and button selection using the up/left and down/right arrow keys is indicated with highlighting the current radio button and label with a rectangle outline and a smaller circle filling in the selected radio button.</li>
-                    </ul>
+                    <p>Subtle hover.</p>
+                    <p>Focus outlines both button and label.</p>
+                    <p>No deselect option.</p>
                 </td>
             </tr>
             <tr>
                 <td style="vertical-align: top;">iPhone Touchscreen</td>
                 <td style="vertical-align: top;">
-                    <ul>
-                        <li>Touchscreen has the same indication of a selected radio button as on a laptop.</li>
-                        <li>Tapping on the button itself highlights the button in a larger transparently colored circle to indicate cursor status, but tapping on the label only selects/unselects and does not highlight the radio button.</li>
-                    </ul>
+                    <p>Same visual cues as desktop.</p>
+                    <p>Tap on label doesnt highlight.</p>
                 </td>
                 <td style="vertical-align: top;">
-                    <ul>
-                        <li>The mobile version of the Amazon checkout payment page does not have radio buttons.</li>
-                    </ul>
+                    <p>No radio buttons on mobile.</p>
                 </td>
                 <td style="vertical-align: top;">
-                    <ul>
-                        <li>The mobile version Outlook does not have this option in Settings.</li>
-                    </ul>
+                    <p>Not supported in mobile.</p>
                 </td>
             </tr>
             <tr>
                 <td style="vertical-align: top;">MacOS VoiceOver</td>
                 <td style="vertical-align: top;">
-                    <ul>
-                        <li>Navigating the focus to an item announces the component type (radio button), the radio button status (selected or not), and the label text.</li>
-                        <li>If a button is unselected, VoiceOver also tells the user which keyboard commands to press in order to select/unselect it.</li>
-                    </ul>
+                    <p>Announces label, selection status, and instructions for selecting/deselecting.</p>
                 </td>
                 <td style="vertical-align: top;">
-                    <ul>
-                        <li>In addition to announcing the radio button label and status, VoiceOver also tells the user which order radio button it is on (ex: radio button 1 of 3). This increases the accessibility from Google Forms since it allows the user to keep track of which number radio button they are on.</li>
-                    </ul>
+                    <p>Announces label, selection status, and position (e.g., “1 of 3”).</p>
                 </td>
                 <td style="vertical-align: top;">
-                    <ul>
-                        <li>VoiceOver for the Outlook radio buttons also announces the button label, status, and order out of all the options.</li>
-                        <li>Since there is no option of deselecting a radio button, VoiceOver doesn’t give it as an option like for Google Forms.</li>
-                    </ul>
+                    <p>Announces label, selection status, and position.</p>
                 </td>
             </tr>
         </table>
@@ -230,7 +157,7 @@
     
     <section id="state-models">
         <h2>State Models</h2>
-        <p>Now that we've explored these three radio button applications, let's select one to analyze and revise. State models can be used to help visualize which radio button inputs result in certain outputs.</p>
+        <p>To make sense of the input-output dynamics, I modeled the radio button states for both mouse and keyboard users in Google Forms. Then, I redesigned these models, making tradeoffs in accessibility, learnability, memorability, or efficiency. These model diagrams helped visualize states and transitions, revealing how small changes in design can make an interface feel more approachable or more frustrating.</p>
         <h3>Google Forms Radio Button Component: Mouse User</h3>
         <img src="assets/mouse1.png" alt="Google Forms Radio buttons mouse user state model" style="width:100%; max-width:600px;">
         <h3>Google Forms Radio Button Component: Keyboard User</h3>
@@ -328,6 +255,16 @@
             <li>Mouse and keyboard users seem to get the most prioritization, which touchscreen and users can face some inconsistencies. While screen-readers seem to be giving user all the necessary information, the organization of that information seem to be more of an afterthought. This could affect the user experience for those who may rely on an input method and make certain applications harder for them to use.</li>
         </ul>
     </section>
+
+    <section id="conclusion">
+        <h2>Conclusion</h2>
+        <p>
+            This project deepened my understanding of how even the most familiar components like radio buttons can offer complex challenges and design opportunities. Through comparing multiple platforms and input types, I learned to look beyond functionality and ask: how do users actually experience this? Small visual cues, input flexibility, and consistent feedback all profoundly shape that experience.
+        </p>
+        <p>
+            What surprised me most was how much the context of use and method of interaction could change what felt intuitive. Designing for mouse users is not the same as designing for keyboard, touchscreen, or screen reader users, and accessibility is often unevenly considered across these modalities. Creating state models and redesigning components pushed me to think systemically and empathize with users who interact in ways I might not normally consider.
+        </p>
+    </section>  
     
     <footer>
         <p>&copy; 2025 My GitHub Page. All rights reserved.</p>

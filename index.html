@@ -3,33 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My GitHub Page</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Responsive Webpage</title>
+    <link rel="stylesheet" href="styles_main.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#projects">Projects</a></li>
-            </ul>
-        </nav>
-    </header>
-    
-    <section id="home">
-        <h1>Welcome to My GitHub Page</h1>
-        <p>This is a modern and clean template for showcasing your projects and work.</p>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top" style="background-color: #ffe1f2;">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link fw-bold" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link fw-bold" href="#projects">Projects</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- About Section -->
+    <section id="about" class="py-5">
+        <div class="about-content">
+            <img src="assets/main/name.svg" alt="Hi, I'm Jasmine in the design of a graph arrow" class="about-logo">
+            <div class="about-text">
+                <p>I'm a data visualizer who is endlessly curious about how people <span style="color: #D1008F;">see</span>, <span style="color: #D1008F;">feel</span>, and <span style="color: #D1008F;">interact</span> with information.</p>
+            </div>
+        </div>
     </section>
-    
-    <section id="projects">
-        <h2>Projects</h2>
-        <a href="radio_buttons.html" class="project-button">Radio Buttons</a>
-        <a href="quench.html" class="project-button">Quench Water Dispenser</a>
-        <a href="responsive.html" class="project-button">Icenhower Oil and Gas</a>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects py-5" style="background-color: #ffffff;">
+        <div class="container">
+            <h2 class="text-center mb-4" style="color: #303030">Projects</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="project-item">
+                        <a href="paint_cit.html" class="project-button">
+                            <img src="assets/main/cit.svg" alt="Brown University logo">
+                        </a>
+                        <h3 style="color: #D1008F;">Paint the CIT</h3>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="project-item">
+                        <a href="radio_buttons.html" class="project-button">
+                            <img src="assets/main/radio_buttons.svg" alt="Radio button image">
+                        </a>
+                        <h3 style="color: #D1008F;">Radio Buttons</h3>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="project-item">
+                        <a href="quench.html" class="project-button">
+                            <img src="assets/main/quench_logo.svg" alt="Quench Logo">
+                        </a>
+                        <h3 style="color: #D1008F;">Quench</h3>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="project-item">
+                        <a href="responsive.html" class="project-button">
+                            <img src="assets/main/icenhower_logo.svg" alt="Icenhower Logo">
+                        </a>
+                        <h3 style="color: #D1008F;">Icenhower Oil & Gas</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
-    
-    <footer>
-        <p>&copy; 2025 My GitHub Page. All rights reserved.</p>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2025 Jasmine Liu</p>
+        </div> 
     </footer>
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>  -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>
+
